@@ -1,5 +1,5 @@
 // Finds the power of A power B and then finds the kth digit of the number
-class KthDigitWithPower {
+class Main {
     public static void main(String[] args) {
        int A = 3, B=3, k=1;
       // Built-in pow function to find A power B
