@@ -3,7 +3,7 @@ import java.lang.*;
 import java.io.*;
 import java.util.Scanner;
 
-class findElement
+class demo
 {
     
     public static boolean isPalindrome(int[] arr){
