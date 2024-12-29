@@ -1,0 +1,25 @@
+class Solution{
+    static ArrayList<Integer> sieveOfEratosthenes(int N){
+        // code here
+        int[] a = new int[N+1];
+        for(int i=2;i<=N;i++){
+            a[i] = 1;
+        }
+        ArrayList<Integer> result = new ArrayList<>();
+        for(int i=2;i<=Math.sqrt(N);i++){
+            if( a[i]==1){
+                for(int j=2*i;j<=N;j=j+i){
+                    a[j]=0;
+                }
+            }
+        }
+        for(int i=2;i<=N;i++){
+            if(a[i]==1){
+                result.add(i);
+            }
+        }
+        return result;
+        
+    }
+}
+//geeks for geeks 
