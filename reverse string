@@ -1,0 +1,25 @@
+class Solution {
+    public static String reverseString(String s) {
+        // Convert string to character array
+        char[] arr = s.toCharArray(); 
+        int left = 0, right = arr.length - 1;
+
+        while (left < right) {
+            // Swap characters
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+
+        // Convert char array back to string
+        return new String(arr);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverseString("Geeks")); // Output: skeeG
+        System.out.println(reverseString("for"));   // Output: rof
+        System.out.println(reverseString("a"));     // Output: a
+    }
+}
